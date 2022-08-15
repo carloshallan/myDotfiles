@@ -1,7 +1,7 @@
 vim.cmd [[colorscheme dracula]]
 
 vim.g.dracula_colors = {
-  bg = "#282A3600",
+  bg = "#282A36",
   fg = "#F8F8F2",
   selection = "#44475A",
   comment = "#6272A4",
@@ -51,3 +51,9 @@ require("transparent").setup({
   },
   exclude = {}, -- table: groups you don't want to clear
 })
+
+-- slightly brighter background to make the float pop more
+vim.api.nvim_set_hl(0, "FloatBorder", { bg = vim.g.dracula_colors.purple, fg = "#5E81AC" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = vim.g.dracula_colors.purple })
+vim.api.nvim_set_hl(0, "TelescopeNormal", { bg = '' })
+vim.api.nvim_set_hl(0, "TelescopeBorder", { bg = '' })

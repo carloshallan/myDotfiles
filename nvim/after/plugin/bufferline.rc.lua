@@ -1,6 +1,10 @@
 local status, bufferline = pcall(require, "bufferline")
 if (not status) then return end
 
+local bg = '#282A36'
+local fg = '#F8F8F2'
+local purple = '#BD93F9'
+
 bufferline.setup({
   options = {
     mode = "tabs",
@@ -12,22 +16,22 @@ bufferline.setup({
   },
   highlights = {
     separator = {
-      fg = '#073642',
-      bg = '#002b36',
+      fg = fg,
+      bg = bg
     },
     separator_selected = {
-      fg = '#073642',
+      fg = fg
     },
     background = {
-      fg = '#657b83',
-      bg = '#002b36'
+      fg = fg,
+      bg = bg
     },
     buffer_selected = {
-      fg = '#fdf6e3',
+      fg = purple,
       bold = true
     },
     fill = {
-      bg = '#073642'
+      bg = bg
     }
   },
 })
